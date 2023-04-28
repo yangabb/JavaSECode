@@ -20,7 +20,8 @@ public class StringMethodTest {
     @Test
     public void test1(){
         String s1 = new String();
-        String s2 = new String("");
+        String s2 = new String("123");
+        System.out.println("s2:"+s2);
 
         String s3 = new String(new char[]{'a','b','c'});
         System.out.println(s3);
@@ -88,7 +89,7 @@ public class StringMethodTest {
         for (int i = 0;i < arr.length;i++){
             System.out.println(arr[i]);
         }
-        System.out.println();
+        System.out.println("以上使用默认的字符集:utf-8");
         //getBytes(String charsetName):使用指定的字符集
         byte[] arr1 = str.getBytes("gbk");
         for (int i = 0; i < arr1.length; i++) {
@@ -97,17 +98,17 @@ public class StringMethodTest {
 
         //byte[] ---> String:
         String str1 = new String(arr); //使用默认的字符集：utf-8
-        System.out.println(str1);
+        System.out.println("str1:"+str1);
 
         String str2 = new String(arr,"utf-8");//显式的指明解码的字符集：utf-8
-        System.out.println(str2);
+        System.out.println("str2:"+str2);
 
         //乱码
 //        String str3 = new String(arr,"gbk");//显式的指明解码的字符集：gbk
 //        System.out.println(str3);
 
         String str4 = new String(arr1,"gbk");
-        System.out.println(str4);
+        System.out.println("str4:"+str4);
     }
 
 }

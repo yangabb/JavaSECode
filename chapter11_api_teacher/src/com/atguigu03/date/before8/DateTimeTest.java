@@ -28,6 +28,7 @@ public class DateTimeTest {
     @Test
     public void test1(){
         Date date1 = new Date(); //创建一个基于当前系统时间的Date的实例
+        System.out.println(date1);
         System.out.println(date1.toString());//Mon Dec 05 11:56:26 CST 2022
 
         long milliTimes = date1.getTime();

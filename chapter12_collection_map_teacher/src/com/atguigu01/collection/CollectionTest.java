@@ -72,16 +72,18 @@ public class CollectionTest {
         coll.add(128);//自动装箱
         coll.add(new String("尚硅谷"));
 
-        //isEmpty()
+        System.out.println("=======//isEmpty()=========");
         System.out.println(coll.isEmpty());
 
         //contains(Object obj)
         System.out.println(coll.contains("AA"));//true
         System.out.println(coll.contains(128));//true
+        System.out.println("new String(\"尚硅谷\")?");
         System.out.println(coll.contains(new String("尚硅谷")));//true
+        System.out.println("new Person(\"Tom\",12)?");
         System.out.println(coll.contains(new Person("Tom",12)));//false-->true
 
-        //containsAll(Collection coll)
+        System.out.println("//containsAll(Collection coll)?");
         Collection coll1 = new ArrayList();
 
         //add()
@@ -137,6 +139,7 @@ public class CollectionTest {
         coll.add(p1);
         coll.add(128);//自动装箱
         coll.add(new String("尚硅谷"));
+        System.out.println("coll"+coll);
 
         //集合 ---> 数组
         Object[] arr = coll.toArray();

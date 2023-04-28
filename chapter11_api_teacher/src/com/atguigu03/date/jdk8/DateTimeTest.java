@@ -59,13 +59,13 @@ public class DateTimeTest {
         //of():获取指定的日期、时间对应的实例
         LocalDate localDate1 = LocalDate.of(2021, 5, 23);
         LocalDateTime localDateTime1 = LocalDateTime.of(2022, 12, 5, 11, 23, 45);
-        System.out.println(localDate1);
-        System.out.println(localDateTime1);
+        System.out.println(localDate1);//
+        System.out.println(localDateTime1);//
 
-        //getXXX()
+        System.out.println("//getXXX()");
         LocalDateTime localDateTime2 = LocalDateTime.now();
         System.out.println(localDateTime2.getDayOfMonth());
-        //体现不可变性
+        System.out.println("============//体现不可变性===========");
         //withXxx()
         LocalDateTime localDateTime3 = localDateTime2.withDayOfMonth(15);
         System.out.println(localDateTime2);//2022-12-05T15:48:48.399
@@ -74,6 +74,7 @@ public class DateTimeTest {
         LocalDateTime localDateTime4 = localDateTime2.plusDays(5);
         System.out.println(localDateTime2);//2022-12-05T15:50:21.864
         System.out.println(localDateTime4);//2022-12-10T15:50:21.864
+        System.out.println(localDateTime2.plusDays(-5));
 
     }
 
@@ -84,18 +85,18 @@ public class DateTimeTest {
     public void test4(){
         //now():
         Instant instant = Instant.now();
-        System.out.println(instant);//2022-12-05T07:56:27.327Z
+        System.out.println(instant);//2023-04-11T07:10:09.863Z
         //了解：
         OffsetDateTime instant1 = instant.atOffset(ZoneOffset.ofHours(8));
-        System.out.println(instant1);
+        System.out.println(instant1);//2023-04-11T15:10:09.863+08:00
 
         Instant instant2 = Instant.ofEpochMilli(24123123312L);
         System.out.println(instant2); //1970-10-07T04:52:03.312Z
 
         long milliTime = instant.toEpochMilli();
-        System.out.println(milliTime);
+        System.out.println(milliTime);//1681197009863
 
-        System.out.println(new Date().getTime());
+        System.out.println(new Date().getTime());//1681197009928
     }
 
     /*

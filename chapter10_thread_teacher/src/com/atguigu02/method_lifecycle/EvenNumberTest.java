@@ -22,15 +22,15 @@ class PrintNumber extends Thread{
 
         for (int i = 1; i <= 100; i++) {
 
-//            try {
-//                Thread.sleep(1000);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
             if(i % 2 == 0){
                 System.out.println(Thread.currentThread().getName() + ":" +
-                        Thread.currentThread().getPriority() + ":" + i);
+                        /*Thread.currentThread().getPriority() + ":" + */i);
             }
 
             if(i % 20 == 0){
@@ -46,25 +46,25 @@ public class EvenNumberTest {
 
         PrintNumber t1 = new PrintNumber("线程1");
         t1.setName("子线程1");
-        t1.setPriority(Thread.MIN_PRIORITY);
+//        t1.setPriority(Thread.MIN_PRIORITY);
         t1.start();
 
         Thread.currentThread().setName("主线程");
-        Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
+//        Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
 
         for (int i = 1; i <= 100; i++) {
             if(i % 2 == 0){
                 System.out.println(Thread.currentThread().getName() + ":" +
-                        Thread.currentThread().getPriority() + ":" + i);
+                        /*Thread.currentThread().getPriority() + ":" + */i+"************************");
             }
 
-//            if(i == 20){
-//                try {
-//                    t1.join();
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
+            if(i == 20){
+                try {
+                    t1.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
 
         }
 

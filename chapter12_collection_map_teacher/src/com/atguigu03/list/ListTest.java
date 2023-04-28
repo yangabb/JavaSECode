@@ -39,7 +39,7 @@ public class ListTest {
     * */
     @Test
     public void test(){
-        List list = new ArrayList();
+        List<Object> list = new ArrayList<>();
         //add(Object obj)
         list.add("AA");
         list.add("BB");
@@ -52,7 +52,7 @@ public class ListTest {
         System.out.println(list);
 
         //addAll(int index, Collection eles)
-        List list1 = Arrays.asList(1, 2, 3);
+        List<Integer> list1 = Arrays.asList(1, 2, 3);
 
         list.addAll(1,list1);
 
@@ -62,7 +62,7 @@ public class ListTest {
 
     @Test
     public void test2(){
-        List list = new ArrayList();
+        List<Object> list = new ArrayList<>();
         //add(Object obj)
         list.add("AA");
         list.add("BB");

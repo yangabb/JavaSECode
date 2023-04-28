@@ -63,7 +63,7 @@ public class IteratorTest {
         coll.add(new String("尚硅谷"));
 
         //方式1：错误的遍历
-//        Iterator iterator = coll.iterator();
+        Iterator iterator = coll.iterator();
 //
 //        while((iterator.next()) != null){
 //            System.out.println(iterator.next());
@@ -71,8 +71,8 @@ public class IteratorTest {
 
         //方式2：错误的遍历
         //每次调用coll.iterator()，都会返回一个新的迭代器对象。
-        while(coll.iterator().hasNext()){
-            System.out.println(coll.iterator().next());
+        while(iterator.hasNext()){
+            System.out.println(iterator.next());
         }
     }
 }

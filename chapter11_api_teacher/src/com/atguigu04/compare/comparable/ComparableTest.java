@@ -45,7 +45,7 @@ public class ComparableTest {
 
     }
 
-    @Test
+/*    @Test
     public void test3(){
         Product p1 = new Product("HuaweiMate50pro",6299);
         Product p2 = new Product("VivoX90pro",5999);
@@ -58,5 +58,5 @@ public class ComparableTest {
             System.out.println("p1和p2一样大");
         }
 
-    }
+    }*/
 }
