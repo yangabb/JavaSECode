@@ -18,7 +18,7 @@ import java.util.Set;
 public class SetTest {
     @Test
     public void test1(){
-        Set set = new HashSet();
+        Set<Object> set = new HashSet<>();
 
         set.add("AA");
         set.add(123);
@@ -26,7 +26,7 @@ public class SetTest {
         set.add(new Person("Tom",12));
         set.add(new Person("Tom",12));
 
-        Iterator iterator = set.iterator();
+        Iterator<Object> iterator = set.iterator();
         while(iterator.hasNext()){
             System.out.println(iterator.next());
         }

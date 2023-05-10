@@ -40,6 +40,11 @@ public class MapTest {
     }
 
     @Test
+    /**
+     * LinkedHashMap:是HashMap的子类；在HashMap使用的数据结构的基础上，增加了一对双向链表，用于记录添加的元素的先后顺序，
+     *                             进而我们在遍历元素时，就可以按照添加的顺序显示。
+     *                             开发中，对于频繁的遍历操作，建议使用此类。
+     */
     public void test3(){
         LinkedHashMap map = new LinkedHashMap();
         map.put("Tom",23);
